@@ -1,0 +1,2 @@
+2021.7.2 dc6745e4a3a8f11d85f70cce5975ce7976db188a
+更新迁移接口，去掉了 OnRealGhostChange 接口，修改成 RequestMigrateOut、RequestMigrateIn 2个，用户层可以在这2个接口处处理路由问题和迁移前的数据准备工作，路由切换完成后调用 ConfirmMigrateOut、ConfirmMigrateIn，来触发大世界模块的迁移操作
