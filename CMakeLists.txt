@@ -22,7 +22,7 @@ if(WIN32)
         IMPORTED_LOCATION_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/curl/lib/libcurld.lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/curl/lib/libcurl.lib
 
-        IMPORTED_LINK_INTERFACE_LIBRARIES "3rd::crypto;3rd::ssl"
+        IMPORTED_LINK_INTERFACE_LIBRARIES "3rd::crypto;3rd::ssl;crypt32.lib;Wldap32.lib"
     )
 elseif(UNIX)
     set_target_properties(3rd::curl PROPERTIES
@@ -107,14 +107,14 @@ endif()
 # gworld::cellmgr
 add_library(3rd::gworld::cellmgr STATIC IMPORTED GLOBAL) 
 if(WIN32) 
-    set_target_properties(3rd:gworld::cellmgr PROPERTIES
+    set_target_properties(3rd::gworld::cellmgr PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/gworld/include/great_world_base/cellmgr"
         INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib
         IMPORTED_LOCATION_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib/gw_cellmgr_d.lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib/gw_cellmgr.lib
     )
 elseif(UNIX)
-    set_target_properties(3rd:gworld::cellmgr PROPERTIES
+    set_target_properties(3rd::gworld::cellmgr PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/gworld/include/great_world_base/cellmgr"
         INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib/gw_cellmgr.a
@@ -124,14 +124,14 @@ endif()
 # gworld::gamespace
 add_library(3rd::gworld::gamespace STATIC IMPORTED GLOBAL) 
 if(WIN32) 
-    set_target_properties(3rd:gworld::gamespace PROPERTIES
+    set_target_properties(3rd::gworld::gamespace PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/gworld/include/great_world_base/gamespace"
         INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib
         IMPORTED_LOCATION_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib/gw_gamespace_d.lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib/gw_gamespace.lib
     )
 elseif(UNIX)
-    set_target_properties(3rd:gworld::gamespace PROPERTIES
+    set_target_properties(3rd::gworld::gamespace PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/gworld/include/great_world_base/gamespace"
         INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib/gw_gamespace.a
