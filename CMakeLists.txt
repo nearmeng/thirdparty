@@ -15,7 +15,7 @@ endif()
 add_library(3rd::curl STATIC IMPORTED GLOBAL)
 if(WIN32)
     set_target_properties(3rd::curl PROPERTIES
-        INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/curl/include/win"
+        INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/curl/include"
         INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/curl/lib
         IMPORTED_LOCATION_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/curl/lib/libcurld.lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/curl/lib/libcurl.lib
@@ -24,7 +24,7 @@ if(WIN32)
     )
 elseif(UNIX)
     set_target_properties(3rd::curl PROPERTIES
-        INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/curl/include/linux"
+        INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/curl/include"
         INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/curl/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/curl/lib/libcurl.a
 
