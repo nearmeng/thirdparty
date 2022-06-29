@@ -1,7 +1,6 @@
 add_library(3rd::crypto STATIC IMPORTED GLOBAL) 
 if(WIN32)
     set_target_properties(3rd::crypto PROPERTIES
-        INTERFACE_LINK_DIRECTORIES IMPORTED_LINK_INTERFACE_LIBRARIES
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/curl/lib/libcrypto.lib
     )
 endif()
@@ -9,7 +8,6 @@ endif()
 add_library(3rd::ssl STATIC IMPORTED GLOBAL) 
 if(WIN32)
     set_target_properties(3rd::ssl PROPERTIES
-        INTERFACE_LINK_DIRECTORIES IMPORTED_LINK_INTERFACE_LIBRARIES
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/curl/lib/libssl.lib
     )
 endif()
