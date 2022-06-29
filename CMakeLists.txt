@@ -107,14 +107,14 @@ add_library(3rd::gworld::cellmgr STATIC IMPORTED GLOBAL)
 if(WIN32) 
     set_target_properties(3rd::gworld::cellmgr PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/gworld/include/great_world_base/cellmgr"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib
         IMPORTED_LOCATION_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib/gw_cellmgr_d.lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib/gw_cellmgr.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::gworld::cellmgr PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/gworld/include/great_world_base/cellmgr"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib/gw_cellmgr.a
     )
 endif()
@@ -124,14 +124,14 @@ add_library(3rd::gworld::gamespace STATIC IMPORTED GLOBAL)
 if(WIN32) 
     set_target_properties(3rd::gworld::gamespace PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/gworld/include/great_world_base/gamespace"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib
         IMPORTED_LOCATION_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib/gw_gamespace_d.lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib/gw_gamespace.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::gworld::gamespace PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/gworld/include/great_world_base/gamespace"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/gworld/lib/gw_gamespace.a
     )
 endif()
@@ -141,13 +141,13 @@ add_library(3rd::hiredis STATIC IMPORTED GLOBAL)
 if(WIN32) 
     set_target_properties(3rd::hiredis PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/hiredis/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/hiredis/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/hiredis/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/hiredis/lib/hiredis.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::hiredis PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/hiredis/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/hiredis/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/hiredis/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/hiredis/lib/libhiredis.a
     )
 endif()
@@ -157,13 +157,13 @@ add_library(3rd::libevent::event STATIC IMPORTED GLOBAL)
 if(WIN32) 
     set_target_properties(3rd::libevent::event PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/libevent/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib/libevent.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::libevent::event PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/libevent/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib/libevent.a
     )
 endif()
@@ -173,13 +173,13 @@ add_library(3rd::libevent::core STATIC IMPORTED GLOBAL)
 if(WIN32) 
     set_target_properties(3rd::libevent::core PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/libevent/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib/libevent_core.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::libevent::core PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/libevent/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib/libevent_core.a
     )
 endif()
@@ -189,13 +189,13 @@ add_library(3rd::libevent::extra STATIC IMPORTED GLOBAL)
 if(WIN32) 
     set_target_properties(3rd::libevent::extra PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/libevent/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib/libevent_extras.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::libevent::extra PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/libevent/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libevent/lib/libevent_extra.a
     )
 endif()
@@ -205,14 +205,14 @@ add_library(3rd::lmdb STATIC IMPORTED GLOBAL)
 if(WIN32) 
     set_target_properties(3rd::lmdb PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/lmdb/include"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/lmdb/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/lmdb/lib
         IMPORTED_LOCATION_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/lmdb/lib/liblmdbd.lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/lmdb/lib/liblmdb.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::lmdb PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/lmdb/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/lmdb/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/lmdb/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/lmdb/lib/liblmdb.a
     )
 endif()
@@ -222,14 +222,14 @@ add_library(3rd::lua STATIC IMPORTED GLOBAL)
 if(WIN32) 
     set_target_properties(3rd::lua PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/lua/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/lua/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/lua/lib
         IMPORTED_LOCATION_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/lua/lib/luad.lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/lua/lib/lua.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::lua PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/lua/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/lua/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/lua/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/lua/lib/liblua.a
     )
 endif()
@@ -239,14 +239,14 @@ add_library(3rd::protobuf STATIC IMPORTED GLOBAL)
 if(WIN32) 
     set_target_properties(3rd::protobuf PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/protobuf/include"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/protobuf/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/protobuf/lib
         IMPORTED_LOCATION_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/protobuf/lib/libprotobufd.lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/protobuf/lib/libprotobuf.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::protobuf PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/protobuf/include"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/protobuf/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/protobuf/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/protobuf/lib/libprotobuf.a
     )
 endif()
@@ -256,13 +256,13 @@ add_library(3rd::tbase STATIC IMPORTED GLOBAL)
 if(WIN32) 
     set_target_properties(3rd::tbase PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/tbase/include"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/tbase/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/tbase/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/protobuf/lib/libtsf4g.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::tbase PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/tbase/include"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/tbase/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/tbase/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/tbase/lib/libtsf4g.a
     )
 endif()
@@ -272,14 +272,14 @@ add_library(3rd::tconnd STATIC IMPORTED GLOBAL)
 if(WIN32) 
     set_target_properties(3rd::tconnd PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/tconnd/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/tconnd/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/tconnd/lib
         IMPORTED_LOCATION_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/tconnd/lib/libtconnapi_d.lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/tconnd/lib/libtconnapi.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::tconnd PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/tconnd/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/tconnd/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/tconnd/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/tconnd/lib/libtconnapi.a
     )
 endif()
@@ -289,13 +289,13 @@ add_library(3rd::tgcpapi STATIC IMPORTED GLOBAL)
 if(WIN32) 
     set_target_properties(3rd::tgcpapi PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/tgcpapi/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/tgcpapi/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/tgcpapi/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/tgcpapi/lib/libtgcpapi.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::tgcpapi PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/tgcpapi/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/tgcpapi/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/tgcpapi/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/tgcpapi/lib/libtgcpapi.a
     )
 endif()
@@ -305,14 +305,14 @@ add_library(3rd::toluapp STATIC IMPORTED GLOBAL)
 if(WIN32) 
     set_target_properties(3rd::toluapp PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/toluapp/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/toluapp/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/toluapp/lib
         IMPORTED_LOCATION_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/toluapp/lib/toluappd.lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/toluapp/lib/toluapp.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::toluapp PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/toluapp/inc"
-        INTERFACE_LINK_LIBRARIES ${CMAKE_CURRENT_SOURCE_DIR}/toluapp/lib
+        INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/toluapp/lib
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/toluapp/lib/libtoluapp.a
     )
 endif()
