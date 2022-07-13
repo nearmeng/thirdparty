@@ -257,7 +257,7 @@ if(WIN32)
     set_target_properties(3rd::tbase PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/tbase/include"
         INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/tbase/lib
-        IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/protobuf/lib/libtsf4g.lib
+        IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/tbase/lib/libtsf4g.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::tbase PROPERTIES
