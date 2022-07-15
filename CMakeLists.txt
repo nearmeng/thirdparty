@@ -250,6 +250,7 @@ elseif(UNIX)
         IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/protobuf/lib/libprotobuf.a
     )
 endif()
+set_property (GLOBAL PROPERTY PROTO_INC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/protobuf/include)
 
 # tbase
 add_library(3rd::tbase STATIC IMPORTED GLOBAL) 
