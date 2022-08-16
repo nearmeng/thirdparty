@@ -292,7 +292,7 @@ if(WIN32)
     set_target_properties(3rd::tgcpapi PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/tgcpapi/inc"
         INTERFACE_LINK_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/tgcpapi/lib
-        IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/tgcpapi/lib/libtgcpapi.lib
+        IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/tgcpapi/lib/tgcpapi.lib
     )
 elseif(UNIX)
     set_target_properties(3rd::tgcpapi PROPERTIES
